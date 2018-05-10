@@ -1,0 +1,12 @@
+{
+  "short_name": "EE ISMS",
+  "name": "Equal Experts: Information Security Management System",
+  "icons": [
+    {
+      "src": "img/Equal-Experts-Apple-Touch-Icon-114.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/"
+}
