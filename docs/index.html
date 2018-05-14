@@ -23,32 +23,36 @@
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-        <p><button id="next" onclick="next()">Next Section</button></p>
+        <p id="toquiz"><button id="toquizbut" onclick="toquiz()">Jump straight to the Quiz!</button> - This helps us "prove" that our employees and associates have learnt the basics of GDPR. It should take less than 15 mins to complete.</p>
+        <p id="toslides"><button id="toslidesbut" onclick="toslides()">Back to the Content!</button></p>
         <!-- Add your site or application content here -->
-        <iframe id="if1" src="https://docs.google.com/forms/d/e/1FAIpQLSfOjHv5MIQBFFjHXQ5p7vwKkbtqqKA623pRuKZu6dMy2w_o5A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="569">Loading...</iframe>
-        <iframe id="if2" src="https://docs.google.com/a/equalexperts.com/presentation/d/e/2PACX-1vTasfF9uckTxMJAPfsO7c2_8f9hjSf6S7rDBUy2O147sEpw1yYbiAYXQ-PfONWpa0eWV4wT8YsW3Snt/embed?start=true&loop=false&delayms=60000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
+        <iframe id="slides" src="https://docs.google.com/a/equalexperts.com/presentation/d/e/2PACX-1vTasfF9uckTxMJAPfsO7c2_8f9hjSf6S7rDBUy2O147sEpw1yYbiAYXQ-PfONWpa0eWV4wT8YsW3Snt/embed?start=true&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe id="quiz" src="https://docs.google.com/forms/d/e/1FAIpQLSfOjHv5MIQBFFjHXQ5p7vwKkbtqqKA623pRuKZu6dMy2w_o5A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" width="960" height="569">Loading...</iframe>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script>
-            console.log($("iframe"))
             $("iframe").hide();
-            var pages = [
-                "1","2"
-            ];
-            var pageIndex = 0;
-            function next(){
-                $("iframe").hide();
-                if (pages.length === pageIndex+1){
-                    $("button#next").attr("disabled", "disabled");
-                }
-                var nextFrame = 'iframe#if'+pages[pageIndex++]
-                console.log(nextFrame);
-                $(nextFrame).show();
+
+            function toquiz(){
+                $("#toquiz").hide();
+                $("#toslides").show();
+
+                $("#slides").hide();
+                $("#quiz").show();
+
             }
-            next()
+            function toslides(){
+                $("#toslides").hide();
+                $("#toquiz").show();
+
+                $("#quiz").hide();
+                $("#slides").show();
+
+            }
+            toslides()
         </script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
