@@ -1,0 +1,24 @@
+
+
+    button {
+        box-shadow: rgb(23, 149, 212) 0px 0px 0px 2px inset;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+        display: inline-block;
+        background: rgb(23, 149, 212) none repeat scroll 0% 0% / auto padding-box border-box;
+        border: 0px none rgb(255, 255, 255);
+        border-radius: 5px 5px 5px 5px;
+        font: normal normal 700 normal 20px / normal lato, sans-serif;
+        padding: 10px;
+        margin: 10px;
+    }
+    p{
+        display: block;
+        color: rgb(102, 102, 102);
+        text-decoration: none solid rgb(102, 102, 102);
+        font: normal normal 400 normal 14px / 18px lato, sans-serif;
+    }
+
+
+
+
