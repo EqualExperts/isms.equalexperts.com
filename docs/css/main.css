@@ -36,17 +36,6 @@ html {
     text-shadow: none;
 }
 
-.hint {
-    margin: 0 0;
-    background: #fed800;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-.hint p {
-    margin: 0 1em;
-}
-
 
 /*
  * A better looking default horizontal rule
